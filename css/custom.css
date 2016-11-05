@@ -1,1 +1,9 @@
 /* Put your custom css here */
+
+.detalhe_produto a:link {color: green;}
+.detalhe_produto a:visited {color: green;}
+.detalhe_produto a:hover {color: red;}
+.detalhe_produto a:active {color: yellow;}
+
+.detalhes-painel{padding-top: 2;}
+.detalhes-visualizou{padding-top: 2px;}
