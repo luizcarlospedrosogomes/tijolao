@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
    <meta charset="Content-Type: text/html; charset=UTF-8">
-  <title>Tijolão - Carrinho</title>
+  <title>Tijolão</title>
   <meta name="description" content="Tijolão">
   <meta name="author" content="Tilolão.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -56,6 +56,7 @@
     <h1>Tijolão.com</h1>
     <p>Smartphones .....</p>
   </div>
+<div id="sobre"></div>
   <div class="acessbilidade"> 
 	<span class="pull-right">
 		<a href="#" title="Aumentar letras" class="btn btn-info btn-lg zoommais" onclick=aumentar();><span class="glyphicon glyphicon-zoom-in" ></span> Zoom +</a>
@@ -73,11 +74,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="index.html"><img src="imagens/tijolao.png" alt="Logo" ></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Samsung</a></li>
         <li><a href="#">Apple</a></li>
         <li><a href="#">Acessorios</a></li>
@@ -86,52 +87,187 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sua conta</a></li>
         <li><a href="carrinho.html"><span class="glyphicon glyphicon-shopping-cart"></span>Carrinho</a></li>
-		<li><a href="sobre.html#sobre">Sobre</a></li>
+		<li class="active"><a href="sobre.html#sobre">Sobre</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- header -- fim -->
-<div id="carrinho"></div>
+
 <div class="container">
   <div class="row">
-      
-	<div class="table-responsive">
-	<table class="table" id="carrinho zoom">
-	<thead>
-		<tr>
-			<th>Descrição</th>
-			<th>Preço</th>
-			<th>Remover</th>
-			<th>Foto</th>
-		</tr>
-	</thead>
-						<tfoot>
-							<tr>
-								<td>Total (R$)</td>
-								<td id="total"><!-- total do carrinho--></td>
-								<td><button id="reset_carrinho" type="button" class="btn btn-danger" onclick="resetCarrinho();">Limpar Carrinho</button></td>
-								<td class="carrinho_contador"></td>
-							</tr>
-					    </tfoot>
-					</table>
-				</div>
-				<div class="row">
-					<div class="col-md-10"></div>
-					<div class="col-sm-2">
-						<button id="reset_carrinho" type="button" class="btn btn-warning">Finalizar compra</button>
-					</div>	
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-6"></div>
-					
-				</div>
-	</div>
+    <div class="col-sm-6">
+		  <div class="panel panel-default">
+			<div class="panel-heading">Mapa do site</div>
+			<div class="panel-body">
+				<ul style="list-style-type:square">
+				  <li>Sua conta
+					<ul>
+						<li><a href="suaconta.html#pedidos">Pedidos</a></li>
+						<li><a href="suaconta.html#endereco">Endereço</a></li>
+						<li><a href="suaconta.html#cartao">Cartões</a></li>
+					</ul>
+				  </li>
+				  <li>Marcas
+					<ul>
+						<li><a href="samsung.html">Samsung</a></li>
+						<li><a href="iphone.html">Iphone</a></li>
+						<li><a href="lenovo.html">Lenovo</a></li>
+						<li><a href="zen.html">Zen</a></li>
+						<li><a href="outras.html">Outras</a></li>
+					</ul>
+				  </li>
+				  <li>Acessorios
+					<ul>
+						<li><a href="carregador.html#carregado">Pedidos</a></li>
+						<li><a href="cabo_usb.html#cabo_usb">Cabo USB</a></li>
+						<li><a href="cartao.html#cartao">Cartão Armazenamento</a></li>
+					</ul>
+				  </li>
+				  <li><a href="carrinho.html#carrinho">Carrinho</a></li>
+				  <li><a href="index.html">Inicio</a></li> 
+				</ul>                                                          
+             </div>
+        </div>
 	</div>
 
+
+    <div class="col-sm-6">
+		  <div class="panel panel-default">
+			<div class="panel-heading">Localização</div>
+			<div class="panel-body">
+				<div id="map" style="width:100%;height:400px;background:yellow"></div>
+
+				<script>
+				function myMap() {
+				  var map = new google.maps.Map(document.getElementById('map'), {
+				  center: {lat: -25.0468895, lng: -50.1267534},
+				  scrollwheel: false,
+				  zoom: 8
+				});
+				}
+				</script>
+
+				<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+			</div>
+		  </div>
+	</div>
+	</div>
+<div class="row">
+    <div class="col-sm-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Contato</div>
+			<div class="panel-body">
+			<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us Today!</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Website or domain name</label>  
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+  <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Do you have hosting?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Project Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
 <!-- footer -- inicio -->
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center contraste">
   <section id="mainFooter">
 		<div class="container">
 			<div class="row">

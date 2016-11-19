@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
    <meta charset="Content-Type: text/html; charset=UTF-8">
-  <title>Tijolão | Detalhes <produto></title>
+  <title>Tijolão - Detalhes</title>
   <meta name="description" content="Tijolão">
   <meta name="author" content="Tilolão.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -45,14 +45,23 @@
 	<link type="text/css" rel="stylesheet" href="css/pygments-manni.css">
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<script src="js/modernizr-2.6.1.min.js"></script>
+	<script src="js/carrinho.js"></script>
 	 
 </head>
-<body>
+<!-- header -- inicio -->
+<body class="zoom contraste">
 
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Tijolão.com</h1>
     <p>Smartphones .....</p>
+  </div>
+  <div class="acessbilidade"> 
+	<span class="pull-right">
+		<a href="#" title="Aumentar letras" class="btn btn-info btn-lg zoommais" onclick=aumentar();><span class="glyphicon glyphicon-zoom-in" ></span> Zoom +</a>
+		<a href="#"  title="Diminuir letras" class="btn btn-warning btn-lg zoommenos" onclick=diminuir();><span class="glyphicon glyphicon-zoom-out" ></span> Zoom -</a>
+		<button type="button" class="btn btn-default btn-lg inscontraste" onclick=contraste(); title="Aplicar contraste na página"><span class="glyphicon glyphicon-adjust"></span> Contraste</span>
+		<button type="button" class="btn btn-default btn-lg unicontraste" onclick=uniContraste(); title="Aplicar contraste na página"><span class="glyphicon glyphicon-adjust"></span>Remover Contraste</span>
   </div>
 </div>
 
@@ -68,19 +77,22 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Samsung</a></li>
         <li><a href="#">Apple</a></li>
         <li><a href="#">Acessorios</a></li>
         <li><a href="#">Outras Marcas</a></li>
+		
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sua conta</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Carrinho</a></li>
+        <li><a href="carrinho.html"><span class="glyphicon glyphicon-shopping-cart"></span>Carrinho</a></li>
+		<li><a href="sobre.html#sobre">Sobre</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- header -- fim -->
 <div class="container-fluid">
 
 	<div class="row">
@@ -306,34 +318,32 @@
 	</div>	
 </div>
 
+<!-- footer -- inicio -->
 <footer class="container-fluid text-center">
   <section id="mainFooter">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<div class="footerWidget">
-						<h3>Mapa do site</h3>
+						<h3>Navegação</h3>
 						<ul class="list-unstyled iconList borderList">
-							<li><a href="#">Sua conta</a></li>
-							<li><a href="#">Carrinho</a></li>
-							<li><a href="#">Tree on a lake</a></li>
-							<li><a href="#">Don’t stop questioning</a></li>
-							<li><a href="#">Overheard this morning</a></li>
+							<li><a href="conta.html">Sua conta</a></li>
+							<li><a href="carrinho.html">Carrinho</a></li>
+							<li><a href="sobre.html">Sobre</a></li>
+							<li><a href="mapadosite.html">Mapa do site</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="footerWidget">
-						<h3>That's what she said</h3>
+						<h3>O que dizem sobre nós</h3>
 						<article class="boxTestimonial">
-
 							<blockquote>
-								Every man has his technique, and they are all different. When you know mine you'll be dead.
+								Comprei e chegou rápido.
 							</blockquote>
-
 							<div class="clientIcon">
-								<img src="images/clients/client3.jpg" alt="client">
-								<span><strong>Patrick Michael</strong>— Kung Fu Master</span>
+								<img src="imagens/cliente.png" alt="Cliente"/>
+								<span><strong>Jeremias sobre sua compra.</strong></span>
 							</div>
 
 						</article>
@@ -368,21 +378,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="images/neko-logo.png" alt="latest Little Neko news" id="footerLogo">
+					<img src="imagens/tijolao_footer.png" alt="" id="footerLogo">
 				</div>
 				<div class="col-md-6">
 					<ul class="quickMenu">
-						<li><a href="template-site-map.html" class="linkLeft">Site map</a></li>
-						<li><a href="template-about.html">About us</a></li>
-						<li><a href="template-team.html">Our team</a></li>
-						<li><a href="template-contact.html">Contact</a></li>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="#">Samsung</a></li>
+						<li><a href="#">Apple</a></li>
+						<li><a href="#">Acessorios</a></li>
+						<li><a href="#">Outras Marcas</a></li>
+						<li><a href="sobre.html#sobre">Sobre</a></li>
+						<li><a href="#">Sua conta</a></li>
+						<li><a href="carrinho.html">Carrinho</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 </footer>
-
 </body>
 </html>
 
+<!-- footer -- fim -->	

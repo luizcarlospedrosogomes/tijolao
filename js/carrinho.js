@@ -40,6 +40,8 @@ $(document).on('click','.addCar', function(){
 	}
 	
 	window.onload = function () {
+		$(".unicontraste").hide();
+		$(".zoommenos").hide();
 		for (var i in item) {
 			localhtml += "<tr><td>" + item[i].nome +"</td>"
 						   + "<td> <button type='button' class='btn btn-primary'>R$ "+ item[i].preco +"</button></td>"
@@ -52,22 +54,36 @@ $(document).on('click','.addCar', function(){
 		$('#total').html("<button type='button' class='btn btn-primary'>R$ "+total+",00</button>");
 		$(".carrinho_contador").html('Carrinho <strong>'+ item_old.length+'</strong>');
 	};
-	
+	/*
 	function contraste(){
 		 $(".contraste").css("background-color","black");
 		 $(".contraste").css("fontSize", 20);
 	}
+	*/
+	function contraste(){
+		 $(".contraste").css("background-color","black");
+		 $(".contraste").css("fontSize", 20);
+		 $(".contraste").css('color','#000');
+		 $(".inscontraste").hide();
+		 $(".unicontraste").show();
+	}
 	function uniContraste(){
 		$(".contraste").css("background-color","");
 		$(".contraste").css("fontSize", "");
+		$(".unicontraste").hide();
+		$(".inscontraste").show();
 	}
 	
 	function aumentar(){
 		$(".zoom").css("fontSize", 30);
+		$(".zoommais").hide();
+		$(".zoommenos").show();
 	}
 	
 	function diminuir(){
 		$(".zoom").css("fontSize", "");
+		$(".zoommenos").hide();
+		$(".zoommais").show();
 	}
 	
 	function login(){
