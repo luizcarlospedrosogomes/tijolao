@@ -7,7 +7,7 @@ $(document).on('click','.addCar', function(){
 		preco     : $(".valor_uni").val(),
 		nome      : $('.nome_prod').val(),
 		quantidade: "1",
-		src       :	$('#foto_bike').prop('src')
+		src       :	$('.foto_smartphone').prop('src')
 	};
 	
 	item_old.push(item_new);
@@ -52,7 +52,7 @@ $(document).on('click','.addCar', function(){
 		}
 		$('#carrinho').append(localhtml);
 		$('#total').html("<button type='button' class='btn btn-primary'>R$ "+total+",00</button>");
-		$(".carrinho_contador").html('Carrinho <strong>'+ item_old.length+'</strong>');
+		$(".carrinho_contador").html('<span style="background-color: orange;border-radius: 10px; margin-top:2px;" ><strong>'+ item_old.length+'</strong></span>');
 	};
 	/*
 	function contraste(){

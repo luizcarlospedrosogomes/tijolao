@@ -86,7 +86,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sua conta</a></li>
-        <li><a href="carrinho.html"><span class="glyphicon glyphicon-shopping-cart"></span>Carrinho</a></li>
+        <li><a href="carrinho.html"><span class="glyphicon glyphicon-shopping-cart carrinho_contador"></span>Carrinho</a></li>
 		<li><a href="sobre.html#sobre">Sobre</a></li>
       </ul>
     </div>
@@ -202,7 +202,7 @@
 			<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 240px; width: 720px; height: 480px; overflow: hidden;">
 				<div data-p="150.00">
 					<img data-u="image" src="imagens/galaxy_on_7_1.jpg" />
-					<img data-u="thumb" src="imagens/galaxy_on_7_1_min.jpg"/>
+					<img data-u="thumb" class="foto_smartphone" src="imagens/galaxy_on_7_1_min.jpg"/>
 				</div>
 				<div data-p="150.00" style="display: none;">
 					<img data-u="image" src="imagens/galaxy_on_7_2.jpg" />
@@ -256,7 +256,14 @@
 		<div class="panel-body">Parcela em 12 X(vezes) no cartão. Sem juros.</div>
 		<div class="panel-body">Pagamento no Boleto. 5% de desconto.</div>
 		<div class="panel-body detalhe_produto">Confira detalhes do <a href="#detalhe_produto" title="Detalhes do produto" class="detalhe_produto_">clique aqui.</a></div>
-        <div class="panel-footer">Não explode(Talvez).<a href="carrinho.html" title="Adicionar ao carrinho"><span class="pull-right"><button type="button" class="btn btn-success">Adicionar ao carrinho</button></span></a></div>
+        <div class="panel-footer">Não explode(Talvez).<a href="#" title="Adicionar ao carrinho"><span class="pull-right"><button type="button" class="btn btn-success addCar">Adicionar ao carrinho</button></span></a></div>
+		
+		<!-- dados para o carrinho -->
+		<div>
+			<button class="id_smartphone hidden" type="hidden" name="id_smartphone" id="id_smartphone" value="1">
+            </button><button class="nome_prod hidden" type="hidden" name="nome_prod" id="nome_prod" value="Galaxy ON7">
+            </button><button class="valor_uni hidden" type="hidden" name="valor_uni" id="valor_uni" value="2300,00">
+		</div>
       </div>
     </div>
 	</div>
@@ -328,7 +335,7 @@
 						<h3>Navegação</h3>
 						<ul class="list-unstyled iconList borderList">
 							<li><a href="conta.html">Sua conta</a></li>
-							<li><a href="carrinho.html">Carrinho</a></li>
+							<li><a href="carrinho.html" class="carrinho_contador">Carrinho</a></li>
 							<li><a href="sobre.html">Sobre</a></li>
 							<li><a href="mapadosite.html">Mapa do site</a></li>
 						</ul>
