@@ -22,26 +22,39 @@ $(document).on('click','.addCar', function(){
 	var total 	  = 0;
 	
 	function removerItem(itemRemover){
-		console.log(itemRemover);
-		for (var i in item) {
-			if(item[i].id == itemRemover) {
-				item.splice(i,1);
-				//return false;
+		var del=confirm("Gostaria o item do  carrinho?");
+			if (del==true){
+				console.log(itemRemover);
+			for (var i in item) {
+				if(item[i].id == itemRemover) {
+					item.splice(i,1);
+					//return false;
+				}
 			}
+			console.log(item);
+			localStorage.setItem( 'cart', JSON.stringify(item));
+			location.reload();
 		}
-		console.log(item);
-		localStorage.setItem( 'cart', JSON.stringify(item));
-		location.reload();
+		return del;	
+		
 	}
 	
 	function resetCarrinho(){
-		localStorage.removeItem('cart');
-		location.reload();
+		var del=confirm("Gostaria de excluir todos os itens do carrinho?");
+		if (del==true){
+			localStorage.removeItem('cart');
+			location.reload();
+		}
+		return del;		
+		
 	}
 	
 	window.onload = function () {
+		
 		$(".unicontraste").hide();
 		$(".zoommenos").hide();
+		$(".contato_mensagem").hide();
+		
 		for (var i in item) {
 			localhtml += "<tr><td>" + item[i].nome +"</td>"
 						   + "<td> <button type='button' class='btn btn-primary'>R$ "+ item[i].preco +"</button></td>"
@@ -94,4 +107,6 @@ $(document).on('click','.addCar', function(){
 		alert("Seja bem vindo " + localStorage.getItem('usuario') + "!");
 	}
 
-	
+$(document).on('click','.contato_enviar', function(){ 
+	$(".contato_mensagem").show();
+});	
